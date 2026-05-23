@@ -1,0 +1,166 @@
+aid: mindtrip
+url: https://raw.githubusercontent.com/api-evangelist/mindtrip/refs/heads/main/apis.yml
+name: Mindtrip
+kind: company
+description: >-
+  Mindtrip is an AI-powered travel planning platform that lets travelers
+  discover destinations, build itineraries, and book flights, hotels,
+  restaurants, experiences, and events through a conversational interface and
+  collaborative trip workspace. Mindtrip Flights launched in May 2026 as the
+  industry's first end-to-end agentic AI flight booking experience, powered by
+  partnership with Sabre (travel content / GDS APIs) and PayPal (payments).
+  Mindtrip is primarily a consumer product; it does not currently expose a
+  general-purpose public REST API, but participates in partner integrations
+  (Sabre Mosaic, PayPal, Ripe ITA, GuideGeek) and runs a Creator and Business
+  program for destinations and hotels.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Travel
+  - AI
+  - Agentic AI
+  - Itinerary Planning
+  - Booking
+  - Consumer
+created: '2026-05-23'
+modified: '2026-05-23'
+specificationVersion: '0.19'
+apis:
+  - aid: mindtrip:web
+    name: Mindtrip Web Application
+    description: >-
+      Consumer-facing web application for conversational AI trip planning,
+      itinerary building, collaboration, and booking of flights, hotels,
+      restaurants, experiences, and events.
+    humanURL: https://mindtrip.ai/
+    baseURL: https://mindtrip.ai/
+    tags:
+      - Web
+      - Consumer
+      - AI
+    properties:
+      - type: Application
+        url: https://mindtrip.ai/
+  - aid: mindtrip:flights
+    name: Mindtrip Flights
+    description: >-
+      Agentic AI flight discovery, booking, and payments experience launched
+      in May 2026, powered by Sabre's travel content APIs and PayPal's
+      payments API.
+    humanURL: https://mindtrip.ai/flights
+    baseURL: https://mindtrip.ai/flights
+    tags:
+      - Flights
+      - Booking
+      - Agentic AI
+    properties:
+      - type: Application
+        url: https://mindtrip.ai/flights
+  - aid: mindtrip:hotels
+    name: Mindtrip Hotels
+    description: >-
+      In-app hotel discovery and booking experience using partner travel
+      content for rates, availability, and reservations.
+    humanURL: https://mindtrip.ai/hotels
+    baseURL: https://mindtrip.ai/hotels
+    tags:
+      - Hotels
+      - Booking
+    properties:
+      - type: Application
+        url: https://mindtrip.ai/hotels
+  - aid: mindtrip:restaurants
+    name: Mindtrip Restaurants
+    description: >-
+      In-app restaurant discovery and reservation experience.
+    humanURL: https://mindtrip.ai/restaurants
+    baseURL: https://mindtrip.ai/restaurants
+    tags:
+      - Restaurants
+      - Reservations
+    properties:
+      - type: Application
+        url: https://mindtrip.ai/restaurants
+  - aid: mindtrip:experiences-events
+    name: Mindtrip Experiences and Events
+    description: >-
+      In-app booking for activities, experiences, concerts, comedy shows,
+      farmers' markets, and family events.
+    humanURL: https://mindtrip.ai/experiences
+    baseURL: https://mindtrip.ai/experiences
+    tags:
+      - Experiences
+      - Events
+      - Tickets
+    properties:
+      - type: Application
+        url: https://mindtrip.ai/experiences
+  - aid: mindtrip:creator-program
+    name: Mindtrip Creator Program
+    description: >-
+      Program that pays travel creators for sharing recommendations and
+      itineraries on the Mindtrip platform.
+    humanURL: https://mindtrip.ai/creators
+    baseURL: https://mindtrip.ai/creators
+    tags:
+      - Creators
+      - Program
+    properties:
+      - type: Documentation
+        url: https://mindtrip.ai/creators
+  - aid: mindtrip:business
+    name: Mindtrip for Business
+    description: >-
+      Partnerships and integrations for destinations, DMOs, hotels, and
+      travel suppliers to reach Mindtrip travelers; the primary B2B surface
+      and the channel for partner API conversations.
+    humanURL: https://mindtrip.ai/business
+    baseURL: https://mindtrip.ai/business
+    tags:
+      - Business
+      - Partnerships
+      - B2B
+    properties:
+      - type: Documentation
+        url: https://mindtrip.ai/business
+  - aid: mindtrip:partner-integrations
+    name: Mindtrip Partner Integrations
+    description: >-
+      Inbound integrations Mindtrip consumes for travel content and payments,
+      including Sabre (Mosaic platform, flight and lodging APIs), PayPal
+      (payments), Ripe ITA Platform, and GuideGeek. No general-purpose public
+      REST API is currently published.
+    humanURL: https://mindtrip.ai/
+    baseURL: https://mindtrip.ai/
+    tags:
+      - Integrations
+      - Sabre
+      - PayPal
+      - Partners
+    properties:
+      - type: Documentation
+        url: https://mindtrip.ai/
+common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/mindtrip-ai
+  - type: Website
+    url: https://mindtrip.ai/
+  - type: Documentation
+    url: https://mindtrip.ai/
+  - type: GitHub
+    url: https://github.com/mindtrip-ai
+  - type: Plans
+    url: plans/mindtrip-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/mindtrip-rate-limits.yml
+  - type: FinOps
+    url: finops/mindtrip-finops.yml
+  - type: Integrations
+    url: https://mindtrip.ai/business
+integrations:
+  - name: Sabre
+  - name: PayPal
+  - name: Ripe ITA
+  - name: GuideGeek
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
