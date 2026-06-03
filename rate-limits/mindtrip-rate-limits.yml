@@ -4,54 +4,43 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Mindtrip
 providerId: mindtrip
 created: '2026-05-22'
-modified: '2026-05-22'
+modified: '2026-06-02'
+reconciled: true
 tags:
 - Travel
 - AI
 - Agentic AI
-- Itinerary Planning
-- Booking
 - Consumer
 - Rate Limiting
-- Quotas
-- Throttling
-description: Scaffolded rate limit definitions for the Mindtrip API surface. Captures per-tier quotas, burst behavior, response
-  signaling, and recovery semantics. Defaults are scaffold values to be replaced with published provider limits.
-headers:
-  limit: X-RateLimit-Limit
-  remaining: X-RateLimit-Remaining
-  reset: X-RateLimit-Reset
-  retryAfter: Retry-After
-  policy: RateLimit-Policy
-responseCodes:
-  throttled: 429
-  quotaExceeded: 429
-  serviceUnavailable: 503
+description: >-
+  Mindtrip is a consumer travel-planning product and does not publish a public
+  developer or partner API. As a result there are no documented per-key,
+  per-account, or per-IP API rate limits, no rate-limit response headers, and
+  no published throttling policy to capture. Any request throttling that exists
+  is internal to the consumer web and mobile clients and is not documented for
+  external integrators. Partner integrations (Sabre travel content, PayPal
+  payments) are governed by those upstream providers' own rate-limit policies,
+  not by a Mindtrip-published API contract. This file records the absence of a
+  public Mindtrip API rate-limit surface.
+sources:
+- https://mindtrip.ai/
+- https://mindtrip.ai/business
 limits:
-- tier: free
-  name: Free Tier Default
-  scope: api-key
-  metric: requests_per_minute
-  limit: 10
-  burst: 20
-  timeFrame: minute
-  applies:
-  - https://mindtrip.ai/
-  description: Default per-token request rate for the free tier. Bursts above the limit return HTTP 429 with Retry-After.
-- tier: pro
-  name: Pro Tier Default
-  scope: api-key
-  metric: requests_per_minute
-  limit: 120
-  burst: 240
-  timeFrame: minute
-  applies:
-  - https://mindtrip.ai/
-  description: Higher rate envelope for paid plans; reconcile against published commercial terms.
-recoveryStrategies:
-- name: Exponential Backoff
-  description: Wait Retry-After seconds (or back off exponentially up to 60s) before retrying.
-- name: Queue and Retry
-  description: Submit bulk work in batches under the burst envelope.
+- name: No Public API Rate Limits
+  scope: account
+  metric: varies
+  limit: 'not applicable - no public API published'
+  notes: >-
+    Mindtrip exposes no public developer/partner API, so no external rate
+    limits are documented. Revisit if Mindtrip launches a developer program.
+policies:
+- name: No Published Policy
+  description: >-
+    There is no public API and therefore no documented retry, backoff,
+    idempotency, or throttling policy for external consumers.
+- name: Upstream Partner Limits
+  description: >-
+    Rate limits relevant to Mindtrip's flight and payment flows are enforced by
+    Sabre and PayPal under their own developer agreements, not by Mindtrip.
 notes:
-- Replace scaffold values with the provider's published rate limit policy.
+- No public Mindtrip API exists; this is the honest no-op state, not a scaffold to be filled with invented numbers.

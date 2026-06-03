@@ -22,7 +22,7 @@ tags:
   - Booking
   - Consumer
 created: '2026-05-23'
-modified: '2026-05-23'
+modified: '2026-06-02'
 specificationVersion: '0.19'
 apis:
   - aid: mindtrip:web
@@ -156,6 +156,11 @@ common:
     url: finops/mindtrip-finops.yml
   - type: Integrations
     url: https://mindtrip.ai/business
+  - type: Pricing
+    url: https://mindtrip.ai/
+  - type: Press
+    title: Mindtrip Flights Launch (May 2026)
+    url: https://www.prnewswire.com/news-releases/mindtrip-launches-travels-first-all-in-one-agentic-ai-flight-booking-experience-powered-by-partnership-with-sabre-and-paypal-302763838.html
 integrations:
   - name: Sabre
   - name: PayPal

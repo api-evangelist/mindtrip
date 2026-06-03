@@ -4,48 +4,105 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Mindtrip
 providerId: mindtrip
 created: '2026-05-22'
-modified: '2026-05-22'
+modified: '2026-06-02'
+reconciled: true
 tags:
 - Travel
 - AI
 - Agentic AI
-- Itinerary Planning
 - Booking
 - Consumer
-description: Machine-readable plans scaffold for the Mindtrip API surface. Conforms to the API Commons Plans schema. Tier
-  limits and prices are scaffold defaults; replace with provider-published values.
+description: >-
+  Mindtrip is a free consumer travel-planning product with no subscription fee
+  and no public developer API, so there is no API-pricing surface to describe.
+  Travelers plan, build itineraries, and collaborate at no cost; Mindtrip
+  monetizes through booking and affiliate partnerships (flights via Sabre,
+  hotels, restaurants, experiences, and events) on a pay-as-you-book basis where
+  the traveler pays the supplier's price for any booking they choose to make,
+  and through B2B partnerships for destinations, DMOs, hotels, and travel
+  suppliers (contact sales). The plans below capture this consumer and B2B
+  commercial model, not an API plan.
+sources:
+- https://mindtrip.ai/
+- https://mindtrip.ai/business
+- https://www.prnewswire.com/news-releases/mindtrip-launches-travels-first-all-in-one-agentic-ai-flight-booking-experience-powered-by-partnership-with-sabre-and-paypal-302763838.html
 plans:
-- id: mindtrip-free
+- id: mindtrip-consumer-free
   name: Free
   type: freemium
-  description: Free entry tier for the Mindtrip API surface. Intended for evaluation, prototyping, and low-volume integrations.
-    Real limits and pricing must be reconciled with the provider's published plan documentation.
+  description: >-
+    Free for travelers. Conversational AI trip planning, itinerary building,
+    destination discovery, maps, collaboration, and sharing at no cost. No
+    subscription is required to use the product.
   entries:
-  - label: API Requests
-    description: Monthly API request quota across all included endpoints
-    name: api_requests
-    type: quota
-    metric: requests
-    limit: 1000
+  - label: Consumer Access
+    description: Trip planning, itineraries, collaboration, and discovery
+    name: consumer_access
+    type: flat
+    metric: month
+    limit: -1
     timeFrame: month
     geo: global
-    domains:
-    - https://mindtrip.ai/
     unit: 1
     price: '0.00'
     userMultiplied: false
-  - label: Rate Limit
-    description: Maximum requests per minute on the free tier
-    name: rate_limit
-    type: rate
-    metric: requests_per_minute
-    limit: 10
-    timeFrame: minute
+  elements:
+  - name: Conversational Trip Planning
+  - name: Itinerary Builder
+  - name: Destination Discovery
+  - name: Collaborative Trip Workspace
+  - name: Maps and Sharing
+- id: mindtrip-pay-as-you-book
+  name: Pay As You Book
+  type: pay-as-you-go
+  description: >-
+    No platform fee. When a traveler books a flight, hotel, restaurant,
+    experience, or event through Mindtrip, they pay the supplier's price at
+    checkout (PayPal-integrated for flights). Mindtrip earns through booking
+    and affiliate partnerships rather than charging the traveler a markup or
+    subscription.
+  entries:
+  - label: Bookings
+    description: Flights, hotels, restaurants, experiences, and events booked through Mindtrip
+    name: bookings
+    type: metered
+    metric: varies
+    limit: -1
+    timeFrame: usage
     geo: global
-    domains:
-    - https://mindtrip.ai/
     unit: 1
-    price: '0.00'
+    price: 'supplier price at checkout'
+    userMultiplied: false
+  elements:
+  - name: Flight Booking
+  - name: Hotel Booking
+  - name: Restaurant Reservations
+  - name: Experiences and Events
+- id: mindtrip-business
+  name: Mindtrip for Business
+  type: enterprise
+  description: >-
+    B2B partnership program for destinations, DMOs, hotels, and travel
+    suppliers to reach Mindtrip travelers, and the channel for Sabre customers
+    to participate in the agentic AI travel experience. Commercial terms are
+    not publicly published.
+  entries:
+  - label: Partnership
+    description: Destination, supplier, and DMO partnership terms
+    name: partnership
+    type: flat
+    metric: varies
+    limit: -1
+    timeFrame: usage
+    geo: global
+    unit: 1
+    price: 'contact sales'
+    userMultiplied: false
+  elements:
+  - name: Supplier and Destination Partnerships
+  - name: Sabre Customer Participation
 references:
-- name: Mindtrip API Documentation
-  url: https://raw.githubusercontent.com/api-evangelist/mindtrip/refs/heads/main/apis.yml
+- name: Mindtrip Website
+  url: https://mindtrip.ai/
+- name: Mindtrip for Business
+  url: https://mindtrip.ai/business

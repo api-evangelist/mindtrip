@@ -1,78 +1,89 @@
 specification: FinOps Framework
 specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: Mindtrip
+providerId: mindtrip
+created: '2026-05-22'
+modified: '2026-06-02'
+reconciled: true
+tags:
+- Travel
+- AI
+- Agentic AI
+- Consumer
+- FinOps
+- FOCUS
+description: >-
+  FOCUS-aligned FinOps shape for Mindtrip: a free-to-consumer travel product
+  with no API-consumption billing. Revenue is a booking take-rate / affiliate
+  commission on flights, hotels, restaurants, and experiences plus B2B
+  partnership fees. There is no public API meter to bill against.
+sources:
+- https://mindtrip.ai/
+- https://mindtrip.ai/business
+- https://www.prnewswire.com/news-releases/mindtrip-launches-travels-first-all-in-one-agentic-ai-flight-booking-experience-powered-by-partnership-with-sabre-and-paypal-302763838.html
 alignedWith:
   framework: FinOps Foundation Framework
   frameworkUrl: https://www.finops.org/framework/
   dataSpec: FOCUS
   dataSpecVersion: '1.3'
   dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
-provider: Mindtrip
-providerId: mindtrip
-publisherName: Mindtrip
-serviceCategory: API
-created: '2026-05-22'
-modified: '2026-05-22'
-tags:
-- Travel
-- AI
-- Agentic AI
-- Itinerary Planning
-- Booking
-- Consumer
-- FinOps
-- Cost Management
-- FOCUS
-description: FinOps framework alignment for the Mindtrip API surface. Provides a FOCUS-shaped mapping for cost allocation,
-  usage measurement, and unit-economics reporting.
+publisherName: Mindtrip, Inc.
+serviceCategory: Travel
+billingModel:
+  pricingCategory: Take Rate + Partnership
+  billingFrequency: Per-Booking
+  billingCurrency: USD
+  chargeCategories:
+  - Usage
+  - Purchase
+focusColumns:
+  ServiceName: Mindtrip
+  ServiceCategory: Travel
+  ProviderName: Mindtrip
+  PublisherName: Mindtrip, Inc.
+  InvoiceIssuerName: Mindtrip, Inc.
+  BillingCurrency: USD
+  ChargeCategory: Usage
+meters:
+- name: bookings
+  unit: transaction
+  aggregation: count
+  dimensions:
+  - product_type
+  - supplier
+  - region
+- name: booking_value
+  unit: varies
+  aggregation: sum
+  dimensions:
+  - product_type
+  - supplier
+- name: partnership_fees
+  unit: varies
+  aggregation: sum
+  dimensions:
+  - partner_type
 principles:
 - name: Visibility
-  description: Make API consumption costs visible to engineering, product, and finance teams in near real-time.
+  description: >-
+    Mindtrip publishes no consumer billing or usage API; cost visibility for
+    travelers is the supplier price shown at checkout (PayPal-integrated for
+    flights). There is no API-consumption telemetry to expose.
 - name: Allocation
-  description: Tag every chargeable API call with the consuming team, environment, application, and feature so cost can be
-    allocated.
+  description: >-
+    Revenue allocates to booking take-rate by product type (flights, hotels,
+    restaurants, experiences) and supplier (e.g. Sabre content) plus B2B
+    partnership fees, rather than to per-team API spend.
 - name: Optimization
-  description: Continuously evaluate request patterns, caching, batching, and tier selection to reduce cost per useful unit
-    of work.
+  description: >-
+    For travelers there is no spend to optimize beyond choosing among presented
+    booking options; the product itself is free. Suppliers optimize via the
+    Mindtrip for Business partnership terms.
 - name: Accountability
-  description: Establish budget owners and chargeback / showback flows for each consuming team.
-domains:
-- name: API Consumption
-  description: Per-call and per-quota usage charges across the Mindtrip API surface.
-  costDrivers:
-  - request_volume
-  - tier_selection
-  - feature_use
-  focusMapping:
-    ChargeCategory: Usage
-    ChargeClass: Consumption
-    ServiceCategory: API
-    ServiceSubcategory: Provider API
-focusFields:
-  required:
-  - BillingPeriodStart
-  - BillingPeriodEnd
-  - ChargeCategory
-  - ChargePeriodStart
-  - ChargePeriodEnd
-  - ProviderName
-  - PublisherName
-  - InvoiceIssuerName
-  - ServiceName
-  - ServiceCategory
-  - BilledCost
-  - EffectiveCost
-  - ListCost
-  - ContractedCost
-  - PricingCategory
-  - PricingUnit
-  - PricingQuantity
-  recommended:
-  - SubAccountId
-  - SubAccountName
-  - ResourceId
-  - ResourceName
-  - ResourceType
-  - Region
-  - Tags
+  description: >-
+    No external API budget owners exist because there is no metered API.
+    Commercial accountability sits with Mindtrip's partnership and supplier
+    agreements (Sabre, PayPal, booking partners).
 notes:
-- Reconcile the scaffolded mapping above against Mindtrip's actual invoice / billing model.
+- No public API consumption billing exists; meters model the booking take-rate and partnership revenue surface, not API calls.
