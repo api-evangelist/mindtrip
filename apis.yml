@@ -140,6 +140,10 @@ apis:
       - type: Documentation
         url: https://mindtrip.ai/
 common:
+  - type: VulnerabilityDisclosure
+    url: security/mindtrip-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/mindtrip-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/mindtrip-ai
   - type: Website
