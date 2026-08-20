@@ -28,6 +28,13 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mindtrip.png
 tags:
   - Travel
+  - Artificial Intelligence
+  - Agentic AI
+  - Itinerary Planning
+  - Booking
+  - Consumer
+tags_raw:
+  - Travel
   - AI
   - Agentic AI
   - Itinerary Planning
@@ -46,6 +53,10 @@ apis:
     humanURL: https://mindtrip.ai/
     baseURL: https://mindtrip.ai/
     tags:
+      - Web
+      - Consumer
+      - Artificial Intelligence
+    tags_raw:
       - Web
       - Consumer
       - AI
@@ -87,6 +98,9 @@ apis:
     humanURL: https://mindtrip.ai/restaurants
     baseURL: https://mindtrip.ai/restaurants
     tags:
+      - Restaurant
+      - Reservations
+    tags_raw:
       - Restaurants
       - Reservations
     properties:
@@ -100,6 +114,10 @@ apis:
     humanURL: https://mindtrip.ai/experiences
     baseURL: https://mindtrip.ai/experiences
     tags:
+      - Experience
+      - Event
+      - Tickets
+    tags_raw:
       - Experiences
       - Events
       - Tickets
@@ -144,6 +162,11 @@ apis:
     humanURL: https://mindtrip.ai/
     baseURL: https://mindtrip.ai/
     tags:
+      - Integration
+      - Sabre
+      - PayPal
+      - Partners
+    tags_raw:
       - Integrations
       - Sabre
       - PayPal
