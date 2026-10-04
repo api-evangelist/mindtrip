@@ -40,7 +40,7 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mindtrip.p
 tags:
   - Travel
   - Artificial Intelligence
-  - Agentic AI
+  - AI Agents
   - Itinerary Planning
   - Booking
   - Consumer
@@ -62,7 +62,6 @@ apis:
       itinerary building, collaboration, and booking of flights, hotels,
       restaurants, experiences, and events.
     humanURL: https://mindtrip.ai/
-    baseURL: https://mindtrip.ai/
     tags:
       - Web
       - Consumer
@@ -83,6 +82,10 @@ apis:
     humanURL: https://mindtrip.ai/flights
     baseURL: https://mindtrip.ai/flights
     tags:
+      - Flights
+      - Booking
+      - AI Agents
+    tags_raw:
       - Flights
       - Booking
       - Agentic AI
@@ -127,7 +130,7 @@ apis:
     tags:
       - Experience
       - Event
-      - Tickets
+      - Ticketing
     tags_raw:
       - Experiences
       - Events
@@ -171,7 +174,6 @@ apis:
       (payments), Ripe ITA Platform, and GuideGeek. No general-purpose public
       REST API is currently published.
     humanURL: https://mindtrip.ai/
-    baseURL: https://mindtrip.ai/
     tags:
       - Integration
       - Sabre
