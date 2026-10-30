@@ -1,4 +1,4 @@
-# Mindtrip (mindtrip)
+# Mindtrip
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,176 +66,110 @@
 
 Mindtrip is an AI-powered travel planning platform that lets travelers discover destinations, build itineraries, and book flights, hotels, restaurants, experiences, and events through a conversational interface and collaborative trip workspace. Mindtrip Flights launched in May 2026 as the industry's first end-to-end agentic AI flight booking experience, powered by partnership with Sabre (travel content / GDS APIs) and PayPal (payments). Mindtrip is primarily a consumer product; it does not currently expose a general-purpose public REST API, but participates in partner integrations (Sabre Mosaic, PayPal, Ripe ITA, GuideGeek) and runs a Creator and Business program for destinations and hotels.
 
-**URL:** [Visit APIs.json URL](https://mindtrip.ai/)
+**Areas:** Travel · Artificial Intelligence · AI Agents · Itinerary Planning · Booking · Consumer
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Mindtrip on APIs.io
 
-## Tags:
+Everything profiled for Mindtrip is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/mindtrip/](https://apis.io/providers/mindtrip/)** — or go straight to one of the APIs or properties below.
 
- - Travel
- - AI
- - Agentic AI
- - Itinerary Planning
- - Booking
- - Consumer
+### APIs (8)
 
-## Timestamps
+- [Mindtrip Web Application](https://apis.io/apis/mindtrip/web/) — Consumer-facing web application for conversational AI trip planning, itinerary building, collaboration, and booking of flights, hotels, restaurants,…
+- [Mindtrip Flights](https://apis.io/apis/mindtrip/flights/) — Agentic AI flight discovery, booking, and payments experience launched in May 2026, powered by Sabre's travel content APIs and PayPal's payments API.
+- [Mindtrip Hotels](https://apis.io/apis/mindtrip/hotels/) — In-app hotel discovery and booking experience using partner travel content for rates, availability, and reservations.
+- [Mindtrip Restaurants](https://apis.io/apis/mindtrip/restaurants/) — In-app restaurant discovery and reservation experience.
+- [Mindtrip Experiences and Events](https://apis.io/apis/mindtrip/experiences-events/) — In-app booking for activities, experiences, concerts, comedy shows, farmers' markets, and family events.
+- [Mindtrip Creator Program](https://apis.io/apis/mindtrip/creator-program/) — Program that pays travel creators for sharing recommendations and itineraries on the Mindtrip platform.
+- [Mindtrip for Business](https://apis.io/apis/mindtrip/business/) — Partnerships and integrations for destinations, DMOs, hotels, and travel suppliers to reach Mindtrip travelers; the primary B2B surface and the channel for…
+- [Mindtrip Partner Integrations](https://apis.io/apis/mindtrip/partner-integrations/) — Inbound integrations Mindtrip consumes for travel content and payments, including Sabre (Mosaic platform, flight and lodging APIs), PayPal (payments), Ripe…
 
-- **Created:** 2026-05-23
-- **Modified:** 2026-06-02
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Mindtrip Web Application
-Consumer-facing web application for conversational AI trip planning, itinerary building, collaboration, and booking of flights, hotels, restaurants, experiences, and events.
+#### Security (2)
 
-**Human URL:** [https://mindtrip.ai/](https://mindtrip.ai/)
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Tags:
+- [Mindtrip Domain Security](https://apis.io/security/mindtrip/mindtrip-domain-security/)
+- [Mindtrip Vulnerability Disclosure](https://apis.io/security/mindtrip/mindtrip-vulnerability-disclosure/)
 
- - Web
- - Consumer
- - AI
+#### Plans and pricing (1)
 
-#### Properties
+Published plans, tiers and prices.
 
-- [Application](https://mindtrip.ai/)
+- [Mindtrip Plans Pricing](https://apis.io/plans/mindtrip/mindtrip-plans-pricing/)
 
-### Mindtrip Flights
-Agentic AI flight discovery, booking, and payments experience launched in May 2026, powered by Sabre's travel content APIs and PayPal's payments API.
+#### Rate limits (1)
 
-**Human URL:** [https://mindtrip.ai/flights](https://mindtrip.ai/flights)
+Published request limits.
 
-#### Tags:
+- [Mindtrip Rate Limits](https://apis.io/rate-limits/mindtrip/mindtrip-rate-limits/)
 
- - Flights
- - Booking
- - Agentic AI
+#### FinOps (1)
 
-#### Properties
+What the API costs to run, by operation.
 
-- [Application](https://mindtrip.ai/flights)
+- [Mindtrip Finops](https://apis.io/finops/mindtrip/mindtrip-finops/)
 
-### Mindtrip Hotels
-In-app hotel discovery and booking experience using partner travel content for rates, availability, and reservations.
+## Where to find this API
 
-**Human URL:** [https://mindtrip.ai/hotels](https://mindtrip.ai/hotels)
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-#### Tags:
-
- - Hotels
- - Booking
-
-#### Properties
-
-- [Application](https://mindtrip.ai/hotels)
-
-### Mindtrip Restaurants
-In-app restaurant discovery and reservation experience.
-
-**Human URL:** [https://mindtrip.ai/restaurants](https://mindtrip.ai/restaurants)
-
-#### Tags:
-
- - Restaurants
- - Reservations
-
-#### Properties
-
-- [Application](https://mindtrip.ai/restaurants)
-
-### Mindtrip Experiences and Events
-In-app booking for activities, experiences, concerts, comedy shows, farmers' markets, and family events.
-
-**Human URL:** [https://mindtrip.ai/experiences](https://mindtrip.ai/experiences)
-
-#### Tags:
-
- - Experiences
- - Events
- - Tickets
-
-#### Properties
-
-- [Application](https://mindtrip.ai/experiences)
-
-### Mindtrip Creator Program
-Program that pays travel creators for sharing recommendations and itineraries on the Mindtrip platform.
-
-**Human URL:** [https://mindtrip.ai/creators](https://mindtrip.ai/creators)
-
-#### Tags:
-
- - Creators
- - Program
-
-#### Properties
-
-- [Documentation](https://mindtrip.ai/creators)
-
-### Mindtrip for Business
-Partnerships and integrations for destinations, DMOs, hotels, and travel suppliers to reach Mindtrip travelers; the primary B2B surface and the channel for partner API conversations.
-
-**Human URL:** [https://mindtrip.ai/business](https://mindtrip.ai/business)
-
-#### Tags:
-
- - Business
- - Partnerships
- - B2B
-
-#### Properties
-
-- [Documentation](https://mindtrip.ai/business)
-
-### Mindtrip Partner Integrations
-Inbound integrations Mindtrip consumes for travel content and payments, including Sabre (Mosaic platform, flight and lodging APIs), PayPal (payments), Ripe ITA Platform, and GuideGeek. No general-purpose public REST API is currently published.
-
-**Human URL:** [https://mindtrip.ai/](https://mindtrip.ai/)
-
-#### Tags:
-
- - Integrations
- - Sabre
- - PayPal
- - Partners
-
-#### Properties
-
-- [Documentation](https://mindtrip.ai/)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/mindtrip-ai)
 - [Website](https://mindtrip.ai/)
 - [Documentation](https://mindtrip.ai/)
-- [GitHub](https://github.com/mindtrip-ai)
-- [Plans](plans/mindtrip-plans-pricing.yml)
-- [RateLimits](rate-limits/mindtrip-rate-limits.yml)
-- [FinOps](finops/mindtrip-finops.yml)
-- [Integrations](https://mindtrip.ai/business)
 - [Pricing](https://mindtrip.ai/)
-- [Press](https://www.prnewswire.com/news-releases/mindtrip-launches-travels-first-all-in-one-agentic-ai-flight-booking-experience-powered-by-partnership-with-sabre-and-paypal-302763838.html)
+- [Blog](https://mindtrip.ai/press)
 
-## Integrations
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Sabre | Travel content / GDS APIs powering flight and lodging booking. |
-| PayPal | Integrated payments and Pay Later at checkout. |
-| Ripe ITA | In-market destination data for curated, place-based answers. |
-| GuideGeek | AI travel discoverability partner. |
+**Kin Score 13.2** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-## Commercial
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 18.4 |
 
-Mindtrip is free for travelers with no subscription; it monetizes through booking/affiliate partnerships (pay-as-you-book) and B2B supplier partnerships. There is no public developer or partner API, so the artifacts below describe the consumer and B2B commercial model rather than an API surface.
+**Agent readiness 0.6** — human-only
 
-- [Plans and Pricing](plans/mindtrip-plans-pricing.yml)
-- [Rate Limits](rate-limits/mindtrip-rate-limits.yml) — records the absence of a public API rate-limit surface
-- [FinOps](finops/mindtrip-finops.yml) — booking take-rate and partnership revenue model
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-## Maintainers
+**Regulatory alignment 10.9** — Horizontal (data, software, accessibility, platform)
 
-**FN:** Kin Lane
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/mindtrip/](https://apis.io/providers/mindtrip/).
 
-**Email:** kin@apievangelist.com
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Mindtrip: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/mindtrip/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
